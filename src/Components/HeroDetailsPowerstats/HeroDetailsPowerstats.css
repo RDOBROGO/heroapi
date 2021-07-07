@@ -1,0 +1,6 @@
+.hero__box__stats {
+    grid-area: stats;
+}
+h2 {
+    font-size: 25px;
+}

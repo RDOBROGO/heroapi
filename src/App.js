@@ -1,6 +1,7 @@
 import './App.css';
 import Nav from './Components/Nav/Nav.js';
-import HeroFeatured from './Components/HeroFeatured/HeroesFeatured.js';
+import HeroFeatured from './Components/HeroesFeatured/HeroesFeatured.js';
+import HeroDetails from './Components/HeroDetails/HeroDetails.js';
 import SearchView from './Components/SearchView/SearchView.js';
 import {
   BrowserRouter as Router,
@@ -23,6 +24,10 @@ function App() {
                 <SearchView />
               </Route>
               <Route path="/hero/:id">
+                <HeroDetails />
+              </Route>
+              <Route path="/save/:id">
+                <HeroDetails />
               </Route>
             </Switch>
           </div>

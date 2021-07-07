@@ -1,0 +1,8 @@
+.hero__box__biography {
+    padding: 10%;
+    grid-area: biography;
+}
+.hero__box__biography p {
+    text-align: right;
+    padding-left: 10%;
+}

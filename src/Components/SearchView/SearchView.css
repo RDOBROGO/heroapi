@@ -3,3 +3,11 @@
   justify-content: space-around;
   flex-wrap: wrap;
 }
+.search a{
+  text-decoration: none;
+  color: unset;
+}
+main .container {
+  display: flex;
+  justify-content: center;
+}
