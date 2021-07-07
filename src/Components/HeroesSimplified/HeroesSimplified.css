@@ -1,6 +1,12 @@
+.hero_detailes {
+  width: 100%;
+}
+.featured__hero{
+  width: 100%;
+}
+
 .featured__hero {
   position: relative;
-  width: 100%;
   border-radius: 20px;
   box-shadow: 0 3px 7px rgba(0,0,0,0.25);
   transition: transform 0.5s ease-in-out;
@@ -8,15 +14,14 @@
 }
 
 @media (min-width: 768px) {
-  .featured__hero {
+  .hero_detailes{
     width: 49%;
   }
 }
 
 @media (min-width: 1200px) {
-  .featured__hero {
+  .hero_detailes{
     width: 32%;
-    cursor: pointer;
   }
 
   .featured__hero:after {
