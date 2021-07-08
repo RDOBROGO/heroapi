@@ -9,7 +9,7 @@ function HeroDetailsWorkAndConnections({ work, connections }) {
         <p>{work.occupation}</p>
       </div>
       <div>
-        <h3>Race:</h3>
+        <h3>Work base:</h3>
         <p>{work.base}</p>
       </div>
       <div>

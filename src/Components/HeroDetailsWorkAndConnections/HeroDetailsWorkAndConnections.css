@@ -3,3 +3,6 @@
     padding: 5%;
     grid-area: workAndConn;
 }
+.hero__box__workAndConn h3{
+    margin-right: 5%;
+}

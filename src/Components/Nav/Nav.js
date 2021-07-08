@@ -30,7 +30,7 @@ function Nav() {
     <div className="container">
       <Link to="/"><img className="nav__logo" onClick={event => {setpromptList([]); setSearchInputValue('')}} src={logo} alt="Superhero Database" /></Link>
       <div className="nav__search">
-        <input onChange={event => setSearchInputValue(event.target.value)} value={searchInputValue} type="text" name="search" />
+        <input onChange={event => setSearchInputValue(event.target.value)} value={searchInputValue} type="text" name="search" autoComplete="off" />
         <Link to={`/search/${searchInputValue}`} onClick={event => {setpromptList([]); setSearchInputValue('')}}><button>find hero!</button></Link>
       </div>
       <div className="promptBox">
