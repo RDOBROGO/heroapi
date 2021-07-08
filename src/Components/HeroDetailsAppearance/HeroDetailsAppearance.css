@@ -1,0 +1,9 @@
+.hero__box__appearance {
+    height: 607.99px;
+    padding: 10% 20% 10% 20%;
+    grid-area: appearance;
+}
+.hero__box__appearance p {
+    text-align: right;
+    padding-left: 10%;
+}

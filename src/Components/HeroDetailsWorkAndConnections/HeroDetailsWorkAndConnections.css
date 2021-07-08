@@ -1,0 +1,5 @@
+.hero__box__workAndConn {
+    width: 98%;
+    padding: 5%;
+    grid-area: workAndConn;
+}

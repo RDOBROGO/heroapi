@@ -17,6 +17,9 @@ export const getDetailsOfHeroById = async id => {
     const { data: powerstats } = await axios.get(`https://superheroapi.com/api/${ACCESS_TOKEN}/${id}/powerstats`);
     const { data: image } = await axios.get(`https://superheroapi.com/api/${ACCESS_TOKEN}/${id}/image`);
     const { data: biography } = await axios.get(`https://superheroapi.com/api/${ACCESS_TOKEN}/${id}/biography`);
+    const { data: appearance } = await axios.get(`https://superheroapi.com/api/${ACCESS_TOKEN}/${id}/appearance`);
+    const { data: work } = await axios.get(`https://superheroapi.com/api/${ACCESS_TOKEN}/${id}/work`);
+    const { data: connections } = await axios.get(`https://superheroapi.com/api/${ACCESS_TOKEN}/${id}/connections`);
 
-    return {name: powerstats.name, powerstats, imgUrl: image.url, biography }
+    return {name: powerstats.name, powerstats, imgUrl: image.url, biography, appearance, work, connections }
 }

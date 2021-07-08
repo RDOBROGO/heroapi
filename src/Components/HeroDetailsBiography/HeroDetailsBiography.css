@@ -1,4 +1,5 @@
 .hero__box__biography {
+    height: 607.99px;
     padding: 10%;
     grid-area: biography;
 }

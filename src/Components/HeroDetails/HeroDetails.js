@@ -5,6 +5,8 @@ import { useParams } from 'react-router-dom';
 import Loader from '../Loader/Loader';
 import HeroDetailsPowerstats from '../HeroDetailsPowerstats/HeroDetailsPowerstats';
 import HeroDetailsBiography from '../HeroDetailsBiography/HeroDetailsBiography';
+import HeroDetailsAppearance from '../HeroDetailsAppearance/HeroDetailsAppearance';
+import HeroDetailsWorkAndConnections from '../HeroDetailsWorkAndConnections/HeroDetailsWorkAndConnections';
 
 function HeroDetails() {
   const {id} = useParams();
@@ -22,6 +24,9 @@ function HeroDetails() {
   }
   const { powerstats } = HeroDetailsList;
   const { biography } = HeroDetailsList;
+  const { appearance } = HeroDetailsList;
+  const { work } = HeroDetailsList;
+  const { connections } = HeroDetailsList;
   return (
     <section className='hero'>
       { !isLoading &&  <div className="container">
@@ -29,6 +34,8 @@ function HeroDetails() {
           <img className='hero__image' src={HeroDetailsList.imgUrl} alt={HeroDetailsList.name + 'image'} />
           <HeroDetailsPowerstats powerstats={powerstats} />
           <HeroDetailsBiography key={biography.id} biography={biography} />
+          <HeroDetailsAppearance key={appearance.id} appearance={appearance} />
+          <HeroDetailsWorkAndConnections key={work.id} connections={connections} work={work}/>
         </div>
       }
       { isLoading && <div className='loader-container'><Loader /></div>

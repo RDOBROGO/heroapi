@@ -2,11 +2,12 @@
     display: grid;
     grid-row-gap: 20px;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 100px auto auto;
+    grid-template-rows: 100px auto auto auto;
     grid-template-areas:
     "name name name name"
     "image image stats stats"
-    "biography biography . .";
+    "biography biography appearance appearance"
+    "workAndConn workAndConn workAndConn workAndConn";
 }
 
 .hero__name {
