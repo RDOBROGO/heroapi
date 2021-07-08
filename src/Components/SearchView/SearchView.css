@@ -7,7 +7,9 @@
   text-decoration: none;
   color: unset;
 }
-main .container {
+.lds-roller{
+  width: 100%;
+  padding: 200px;
   display: flex;
   justify-content: center;
 }

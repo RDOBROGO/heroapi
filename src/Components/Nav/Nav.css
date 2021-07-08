@@ -5,6 +5,7 @@
 }
 
 .nav .container {
+  position: relative;
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -46,4 +47,22 @@ transform: scale(1.1);
 .nav__search input, .nav__search button {
   height: 35px;
   padding: 3px 10px;
+}
+
+.promptBox {
+  position: absolute;
+  width: 182.22px;
+  right: 89px;
+  top: 80px;
+  z-index: 1;
+}
+.promptBox p {
+  margin: 0;
+  background-color: black;
+  padding: 0 20px 0 20px;
+  border-top: 1px solid white ;
+  transition: 0.5s;
+}
+.promptBox p:hover {
+  transform: scale(1.05);
 }
