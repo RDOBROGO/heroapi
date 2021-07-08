@@ -32,10 +32,10 @@ function HeroDetails() {
       { !isLoading &&  <div className="container">
           <h1 className='hero__name'>{HeroDetailsList.name}</h1>
           <img className='hero__image' src={HeroDetailsList.imgUrl} alt={HeroDetailsList.name + 'image'} />
-          <HeroDetailsPowerstats powerstats={powerstats} />
-          <HeroDetailsBiography key={biography.id} biography={biography} />
-          <HeroDetailsAppearance key={appearance.id} appearance={appearance} />
-          <HeroDetailsWorkAndConnections key={work.id} connections={connections} work={work}/>
+          <HeroDetailsPowerstats key={powerstats.id + 'P'} powerstats={powerstats} />
+          <HeroDetailsBiography key={biography.id + 'B'} biography={biography} />
+          <HeroDetailsAppearance key={appearance.id + 'A'} appearance={appearance} />
+          <HeroDetailsWorkAndConnections key={work.id + 'C'} connections={connections} work={work}/>
         </div>
       }
       { isLoading && <div className='loader-container'><Loader /></div>

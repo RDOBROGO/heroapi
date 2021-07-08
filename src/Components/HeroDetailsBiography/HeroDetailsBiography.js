@@ -16,8 +16,8 @@ function HeroDetailsBiography({ biography }) {
       <div>
         <h3>Alias:</h3>
         <p>{biography.aliases.map((alias,index=0) => {
-          if(index === 0) return <span>{alias}</span>
-          else return <span> | {alias}</span>})
+          if(index === 0) return <span key={index}>{alias}</span>
+          else return <span key={index}> | {alias}</span>})
       }</p>
       </div>
       <div>

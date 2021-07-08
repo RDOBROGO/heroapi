@@ -56,13 +56,23 @@ transform: scale(1.1);
   top: 80px;
   z-index: 1;
 }
+
+.promptBox a {
+  font-size: 100%;
+  font-weight: 300;
+}
+
 .promptBox p {
   margin: 0;
   background-color: black;
   padding: 0 20px 0 20px;
   border-top: 1px solid white ;
   transition: 0.5s;
+  cursor: pointer;
+  box-shadow: 0 3px 7px rgb(255 255 255 / 50%);
+  border-radius: 8px;
 }
+
 .promptBox p:hover {
   transform: scale(1.05);
 }

@@ -8,10 +8,12 @@ function Nav() {
   const [ searchInputValue, setSearchInputValue ] = useState('');
   const [ promptList, setpromptList ] = useState([]);
 
+    document.addEventListener('click',() => {
+      console.log('click');
+    });
   useEffect(() => {
     searchHeroesByName(searchInputValue).then(searchResults => {
       const { data } = searchResults;
-
       if (data.error) {
         return;
       }
@@ -19,7 +21,7 @@ function Nav() {
       const { results } = data;
       let limitedPromptList = [];
       for(let i=0; i<results.length && i<5 ; i++) {
-        limitedPromptList.push(results[i].name);
+        if(limitedPromptList.indexOf(results[i].name) === -1) limitedPromptList.push(results[i].name);
       }
       setpromptList(limitedPromptList);
     })
@@ -28,14 +30,14 @@ function Nav() {
   return (
     <nav className="nav">
     <div className="container">
-      <Link to="/"><img className="nav__logo" onClick={event => {setpromptList([]); setSearchInputValue('')}} src={logo} alt="Superhero Database" /></Link>
+      <Link to="/"><img className="nav__logo" onClick={() => {setpromptList([]); setSearchInputValue('')}} src={logo} alt="Superhero Database" /></Link>
       <div className="nav__search">
         <input onChange={event => setSearchInputValue(event.target.value)} value={searchInputValue} type="text" name="search" autoComplete="off" />
-        <Link to={`/search/${searchInputValue}`} onClick={event => {setpromptList([]); setSearchInputValue('')}}><button>find hero!</button></Link>
+        <Link to={`/search/${searchInputValue}`}><button>find hero!</button></Link>
       </div>
-      <div className="promptBox">
-        {promptList.map(prompt => <p onClick={event => setSearchInputValue(event.target.outerText)}>{prompt}</p>)}
-      </div>
+        <div className="promptBox">
+          {promptList.map(prompt => <Link to={`/search/${prompt}`}><p>{prompt}</p></Link>)}
+        </div>
     </div>
   </nav>
   );
