@@ -16,6 +16,8 @@ function SearchView() {
       const { data } = searchResults;
 
       if (data.error) {
+        setLoadingState(false);
+        setSearchListContent([]);
         return;
       }
 
@@ -29,7 +31,12 @@ function SearchView() {
     <>
       { !isLoading && 
         (<section className='search'>
-          {searchList.map(({powerstats, image, name, id}) => <HeroSimplfied key={id} powerstats={powerstats} imgUrl={image.url} name={name} id={id}/>)}
+          {
+          searchList.length > 0 && searchList.map(({powerstats, image, name, id}) => <HeroSimplfied key={id} powerstats={powerstats} imgUrl={image.url} name={name} id={id}/>)
+          }
+          {
+          searchList.length === 0 && <p>The hero does not exist!</p>
+          }
         </section>)
       } {
         isLoading && <Loader/>
