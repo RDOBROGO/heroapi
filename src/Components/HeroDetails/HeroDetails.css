@@ -1,17 +1,23 @@
-.hero .container{
-    display: grid;
-    grid-row-gap: 20px;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 100px auto auto auto;
-    grid-template-areas:
-    "name name name name"
-    "image image stats stats"
-    "biography biography appearance appearance"
-    "workAndConn workAndConn workAndConn workAndConn";
+
+  @media (min-width: 768px) {
+    .hero .container{
+        display: grid;
+        grid-row-gap: 20px;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 100px auto auto auto;
+        grid-template-areas:
+        "name name name name"
+        "image image stats stats"
+        "biography biography appearance appearance"
+        "workAndConn workAndConn workAndConn workAndConn";
+    }
+    .hero__image {
+        margin: 0 auto;
+    }
 }
 
 .hero__name {
-    font-size: 35px;
+    font-size: 30px;
     text-align: center;
     width: 100%;
     grid-area: name;
@@ -19,7 +25,7 @@
 
 .hero__image {
     width: 95%;
-    margin: 0 auto;
+    margin-left: 2.5%;
     border-radius: 20px;
     box-shadow: 0 3px 7px rgb(0 0 0 / 25%);
     grid-area: image;
@@ -28,7 +34,7 @@
 .hero__box {
     width: 95%;
     margin: 0 auto;
-    padding: 15%;
+    padding: 10%;
     box-shadow: 0 3px 7px rgb(0 0 0 / 25%);
     border-radius: 20px;
     display: flex;
@@ -36,8 +42,13 @@
 }
 
 .hero__box h2 {
+    font-size: 20px;
     width: 100%;
     text-align: center;
+}
+
+.hero__box h3 {
+    font-size: 15px;
 }
 
 .hero__box div{
@@ -50,3 +61,19 @@
     justify-content: space-around;
     width: 35%;
 }
+
+@media (min-width: 1200px) {
+    .hero__name {
+        font-size: 35px;
+    }
+    .hero__box {
+        padding: 15%;
+    }
+    .hero__box h2 {
+        font-size: 25px;
+    }
+
+    .hero__box h3 {
+        font-size: 19px;
+    }
+  }

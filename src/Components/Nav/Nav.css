@@ -20,12 +20,25 @@
 }
 
 .nav__logo {
-  width: 140px;
+  width: 100px;
+  margin-right: 10px;
 }
 
 .nav__search input {
   border: none;
   border-radius: 8px;
+  width: 90px;
+  margin-left: 5px;
+}
+@media (min-width: 270px) {
+  .nav__search input {
+    width: 140px;
+  }
+}
+@media (min-width: 350px) {
+  .nav__search input {
+    width: 190px;
+  }
 }
 
 .nav__search button {
@@ -51,10 +64,17 @@ transform: scale(1.1);
 
 .promptBox {
   position: absolute;
-  width: 182.22px;
-  right: 89px;
+  width: 90%;
+  right: 5%;
   top: 80px;
   z-index: 1;
+}
+
+@media (min-width: 422px) {
+  .promptBox {
+    width: 190px;
+    right: 92px;
+  }
 }
 
 .promptBox a {
